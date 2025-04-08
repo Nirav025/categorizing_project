@@ -1,11 +1,15 @@
 #include <iostream>
 using namespace std;
 
+
+
 // Node structure for Linked List
 struct Node {
     int data;
     Node* next;
 };
+
+
 
 // Linked List class
 class LinkedList {
@@ -27,6 +31,9 @@ public:
     void setHead(Node* newHead) { head = newHead; }
 };
 
+
+
+
 // Insert at end
 void LinkedList::insert(int val) {
     Node* newNode = new Node{val, NULL};
@@ -39,6 +46,9 @@ void LinkedList::insert(int val) {
         temp->next = newNode;
     }
 }
+
+
+
 
 // Display list
 void LinkedList::display() {
@@ -54,6 +64,8 @@ void LinkedList::display() {
     }
     cout << endl;
 }
+
+
 
 // Merge two sorted lists
 Node* LinkedList::merge(Node* a, Node* b) {
@@ -71,6 +83,8 @@ Node* LinkedList::merge(Node* a, Node* b) {
     }
     return result;
 }
+
+
 
 // Merge sort
 Node* LinkedList::mergeSort(Node* h) {
@@ -94,6 +108,8 @@ Node* LinkedList::mergeSort(Node* h) {
 
     return merge(left, right);
 }
+
+
 
 // Sort list using Merge Sort
 void LinkedList::sortList() {
@@ -130,6 +146,9 @@ void LinkedList::binarySearch(int val) {
     else
         cout << val << " not found in the list.\n";
 }
+
+
+
 
 // Main Program (Menu)
 int main() {
